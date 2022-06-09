@@ -47,10 +47,10 @@ def p_decode(vqgan, indices, params):
 
 class DalleModel:
     def __init__(self, model_version: ModelSize) -> None:
-#        if model_version == ModelSize.MINI:
-#            dalle_model = DALLE_MODEL_MINI
-#            dtype = jnp.float32
-#        else:
+        if model_version == ModelSize.MINI:
+            dalle_model = DALLE_MODEL_MINI
+            dtype = jnp.float32
+        else:
             dalle_model = DALLE_MODEL_MEGA
             dtype = jnp.float16
 
