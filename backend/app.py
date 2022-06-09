@@ -43,11 +43,11 @@ with app.app_context():
     try:
         dalle_version = ModelSize[sys.argv[2].upper()]
     except (KeyError, IndexError):
-        dalle_version = ModelSize.MINI
+        dalle_version = ModelSize.MEGA
     dalle_model = DalleModel(dalle_version)
     dalle_model.generate_images("warm-up", 1)
     print("--> DALL-E Server is up and running!")
-    print(f"--> Model selected - DALL-E {dalle_version}")
+    print(f"--> Model selected - PRKL DALL-E {dalle_version}")
 
 
 if __name__ == "__main__":
